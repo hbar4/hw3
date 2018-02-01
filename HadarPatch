@@ -1,0 +1,44 @@
+function HadarPatch(x, y) {
+  fill(202,247,255);
+  stroke(0);
+  strokeWeight(3);
+  rect(x, y, 300, 300);
+  
+  // your code here!
+  stroke(35,150,67);
+  fill(51,175,67); //color of overall face
+  ellipse(x+150, y+150, 250, 120); // face
+  stroke(150);
+  strokeWeight(2);
+  fill(255); // whites of eyes
+  ellipse(x+100,y+100,50,50);// overall left eye
+  ellipse(x+(200),y+100,50,50); //overall right eye
+  fill(97,192,255); //eye color
+  noStroke();
+  ellipse(x+100,y+100,40,40);// left eye with color
+  ellipse(x+(200),y+100,40,40); //right eye with color
+    fill(0); //pupil color
+  ellipse(x+100,y+100,32,32);// left eye pupil
+  ellipse(x+(200),y+100,32,32); //right eye pupil
+  fill(255); //whites of inner circles in eyes
+  ellipse(x+99,y+95,15,14);// large left eye white inner eye
+  ellipse(x+199,y+95,15,14); //large right white inner eye
+    ellipse(x+110,y+98,3,3);// small inner circle 1 (left eye, upper)
+  ellipse(x+94,y+105,4,4);// small inner circle 2 (left eye, lower)
+ellipse(x+208,y+98,3,3);// small inner circle 1 (right eye, upper)
+  ellipse(x+205,y+105,4,4);// small inner circle 2 (right eye, lower)
+  fill(35,150,67);
+  ellipse(x+142, y+140, 6, 16);//left nostril
+  ellipse(x+158, y+140, 6, 16);//right nostril
+  noFill();
+  stroke(25,135,50);
+  strokeWeight(3);
+  arc(x+300/2, y+150, 200, 40, PI*2, PI, OPEN);//mouth
+  fill(250,157,157);
+  stroke(166,80,80);
+  arc(x+222, y+163, 20, 60, 0, (7*PI)/8, CHORD);//tongue
+  line(x+222,y+167,x+222,y+177);
+}
+
+background(255);
+HadarPatch(0, 0); // draw patch at upper-left
